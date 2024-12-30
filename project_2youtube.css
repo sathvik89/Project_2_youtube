@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation .hamburger_button{
+    width: 2.5rem;
+}
+.navigation .logo{
+    width: 12.5rem;
+}
+.navigation .searchbar input[type="text"]{
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.navigation .microphone{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    margin: 0;
+
+}
+.navigation .tosearch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
