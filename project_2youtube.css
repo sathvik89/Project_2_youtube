@@ -1,52 +1,65 @@
 *{
     margin: 0;
     padding: 0;
+
+    box-sizing: border-box;
+}
+body{
     background-color: black;
 }
 .navigation{
     margin: 0px 20px;
-    display: flex;
-    text-align: center;
-
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
     align-items: center;
-    justify-content: space-between;
 }
-.navigation .hamburger_button{
+
+.left , .tosearch, .right{
+    display: flex;
+    align-items: center;
+}
+
+.navigation .left .hamburger_button img{
     width: 2.5rem;
 }
-.navigation .hamburger_button:hover{
+.navigation .left .hamburger_button:hover{
     cursor: pointer;
 }
 
-.navigation  .logo{
+.navigation .left .logo img{
     width: 12.5rem;
-    /* margin-left:300px; */
 }
-.navigation .logo:hover{
+.navigation .left .logo:hover{
     cursor: pointer;
 }
 
-.navigation .searchbar input[type="text"]{
-    padding: 10px 20px;
-    border-radius: 20px;
+.navigation .tosearch .searchbar input[type="text"]{
+    padding: 10px 30px;
+    border-radius: 10px;
     color: white;
+    background-color: #333;
+    border: none;
     width: 300px;
+
 }
 
-.navigation .microphone{
+.navigation .tosearch .microphone{
     width: 2.5rem;
     height: 2.5rem;
-    padding: 15px;
-    margin: 0;
+    margin-left: 10px;
     cursor: pointer;
+}
+
+.navigation .right{
+    justify-content: flex-end;
 }
 
 .navigation .tosearch{
     display: flex;
-    align-items: center;
     justify-content: center;
 }
-.navigation .createbutton{
+
+.navigation .right .createbutton{
     background-color: rgb(25, 25, 25);
     color: rgb(255, 255, 255);
     font-size: 20px;
@@ -54,26 +67,154 @@
     border-radius: 20px;
 
 }
-.navigation .createbutton:hover{
+
+.navigation .right .createbutton:hover{
     background-color: grey;
     cursor: pointer;
     transform: 10s all ease;
 }
-.navigation .notificationbutton img{
-    width: 50px;
-    height: 50px;
-    padding-top: 10px;
+.right .notificationbutton img,.right .profilepic img { 
+    width: 40px; 
+    height: auto; 
+    margin-left: 10px; 
     cursor: pointer;
 }
-.navigation .profilepic img{ 
-    width: 60px;
-    height: 60px;
-    padding-top: 10px;
-}
-.navigation .right{
-    /* display: flex; */
+
+.leftbar{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr;
-    gap: 5px;
+    grid-template-columns: 0.15fr;
+    align-content: center;
+    padding: 0px 12px;
 }
+.leftbar .homebutton{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    /* background-color: grey; */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.leftbar .homebutton img{
+    justify-content: flex-end;
+}
+
+.leftbar .shortsbutton{
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    /* background-color: grey; */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+
+}
+.leftbar .Subscriptionbutton{
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    /* background-color: grey; */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.leftbar .youbutton{
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    /* background-color: grey; */
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+    /* border-radius: 5px; */
+    border-top: 1px solid rgb(255,255,255,0.2);
+    line-height: 2rem;
+    font-weight: 500;
+}
+.leftbar .historybutton{
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.leftbar .playlistsbutton{
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.leftbar .yourvideosbutton{
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.leftbar .yourcoursesbutton{
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.leftbar .watchlaterbutton{
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.leftbar .likedvideosbutton{
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.leftbar .subscriptions{
+    height: 300px;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 500;
+    overflow:auto ;
+    scrollbar-width: thin;
+    /* scrollbar-color: white; */
+    border-top: 1px solid rgb(255,255,255,0.2);
+}
+.leftbar .subscriptions .list{
+    font-family: "Roboto", "Arial", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    font-weight: 400;
+    text-overflow: ellipsis;
+}
+
+
